@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 4564913250725681328}
   - component: {fileID: 4564913250725681329}
   - component: {fileID: 4564913250725681330}
-  - component: {fileID: 4564913250725681341}
+  - component: {fileID: 8522745550668918433}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -217,7 +217,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!108 &4564913250725681341
+--- !u!108 &8522745550668918433
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,10 +227,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.93333334, g: 0.8600563, b: 0, a: 1}
-  m_Intensity: 0.75
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 48
+  m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -250,7 +250,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
+  m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0

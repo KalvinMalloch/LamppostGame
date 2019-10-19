@@ -60,7 +60,7 @@ public class MovementScript : MonoBehaviour
 	
 	void LightDim() 
 	{
-		glow.range = 5;
+		glow.intensity = depression/2;
 	}
 	
 	private void Movement (float horizontal) 
@@ -80,22 +80,21 @@ public class MovementScript : MonoBehaviour
 		
 	}
 
-    void OnTriggerEnter2D(Collider2D Lamp)
+    void OnTriggerStay2D(Collider2D Lamp)
     {
         if (Lamp.tag == "Light")
         {
             inLight = true;
-        }
-		if (Lamp.tag == "Ground")
-        {
-            grounded = true;
-        }
+        } else {
+			inLight = false;
+		}
     }
-    void OnTriggerExit2D(Collider2D Lamp)
+	
+	void OnTriggerEnter2D(Collider2D Ground)
     {
-        if (Lamp.tag == "Light")
+        if (Ground.tag == "Ground")
         {
-            inLight = false;
-        }
-    }
+			grounded = true;
+		}
+	}
 }
