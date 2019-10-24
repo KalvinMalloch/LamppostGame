@@ -90,12 +90,13 @@ public class MovementScript : MonoBehaviour
 			inLight = false;
 		}
     }
-	
-	void OnTriggerEnter2D(Collider2D Ground)
+
+
+    void OnTriggerEnter2D(Collider2D Ground)
     {
         if (Ground.tag == "Ground")
         {
-			grounded = true;
-		}
-	}
+            grounded = true;
+        }
+    }
 }
