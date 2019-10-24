@@ -20,9 +20,13 @@ public class MenuManager : MonoBehaviour
 
 	void Update() {
 		PlayerScore();
-        if (Input.GetKey(KeyCode.Escape) == true)
+        MovementScript playerScripts = player.GetComponent<MovementScript>();
+        if ((Input.GetKeyDown(KeyCode.Escape) == true) && (playerScripts.moveControls == true))
         {
             Pause();
+        } else if (Input.GetKeyDown(KeyCode.Escape) == true)
+        {
+            Resume();
         }
     }
 
@@ -64,6 +68,14 @@ public class MenuManager : MonoBehaviour
         playerScripts.moveControls = false;
         PauseMenu.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        MovementScript playerScripts = player.GetComponent<MovementScript>();
+        playerScripts.moveControls = true;
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void LoadCredits(){
