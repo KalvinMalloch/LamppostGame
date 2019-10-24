@@ -23,6 +23,7 @@ public class MovementScript : MonoBehaviour
 		moveControls = true;
         inLight = false;
 		grounded = true;
+		Time.timeScale = 1;
 	}
 	
     void Update() 

@@ -43,3 +43,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2537242013
+    locked: 0
+  - name: Road
+    uniqueID: 1264821553
+    locked: 0
+  - name: Pavement
+    uniqueID: 3075661145
+    locked: 0
+  - name: Trashcans
+    uniqueID: 565029351
+    locked: 0
+  - name: Lamposts
+    uniqueID: 2204449535
+    locked: 0
+  - name: Player
+    uniqueID: 620170653
+    locked: 0
