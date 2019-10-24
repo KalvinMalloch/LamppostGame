@@ -58,6 +58,12 @@ TagManager:
   - name: Lamposts
     uniqueID: 2204449535
     locked: 0
+  - name: Flames
+    uniqueID: 625316891
+    locked: 0
+  - name: Eyes
+    uniqueID: 3865985953
+    locked: 0
   - name: Player
     uniqueID: 620170653
     locked: 0
