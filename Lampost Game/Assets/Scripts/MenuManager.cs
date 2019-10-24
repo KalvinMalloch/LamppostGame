@@ -27,7 +27,8 @@ public class MenuManager : MonoBehaviour
 			Time.timeScale = 0;
 			WinMenu.SetActive (true);
 			player.SetActive (false);
-			timeText.text = timer;
+            timer = Mathf.Round(timer * 100f) / 100f;
+            timeText.text = "You survived for " + timer.ToString() + " seconds.";
 		} else {
 			timer += Time.deltaTime;
 		}

@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
     {
         if (IsLightChosen == false) 
         {
-            int previousLight = LightChosen;        //Code provided by Cole
-            while(nextLight == previousLight){        //Code provided by Cole
+            int previousLight = LightChosen;   
+            while(nextLight == previousLight){
                 nextLight = Random.Range(1, 4);
             }
             IsLightChosen = true;
