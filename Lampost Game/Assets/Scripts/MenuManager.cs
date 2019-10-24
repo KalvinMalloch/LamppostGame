@@ -10,20 +10,25 @@ public class MenuManager : MonoBehaviour
 	public GameObject WinMenu;
 	public GameObject CreditsPanel;
 	public GameObject player;
-	public Text timeText;
+    public GameObject PauseMenu;
+    public Text timeText;
 	public float timer;
 
 	void Awake() {
 		timer = 0f;
-	}
+    }
 
 	void Update() {
 		PlayerScore();
-	}
+        if (Input.GetKey(KeyCode.Escape) == true)
+        {
+            Pause();
+        }
+    }
 
 	public void PlayerScore() {
-		MovementScript playerScripts = player.GetComponent<MovementScript>();
-		if (playerScripts.depression <= 0) {
+        MovementScript playerScripts = player.GetComponent<MovementScript>();
+        if (playerScripts.depression <= 0) {
 			Time.timeScale = 0;
 			WinMenu.SetActive (true);
 			player.SetActive (false);
@@ -53,7 +58,15 @@ public class MenuManager : MonoBehaviour
 		CreditsPanel.SetActive (false);
 	}
 
-	public void LoadCredits(){
+    public void Pause()
+    {
+        MovementScript playerScripts = player.GetComponent<MovementScript>();
+        playerScripts.moveControls = false;
+        PauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void LoadCredits(){
 		MainMenu.SetActive (false);
 		CreditsPanel.SetActive (true);
 	}
